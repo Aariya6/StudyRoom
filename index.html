@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080706" />
+  <title>Ravenhall — Open Study</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div id="ambientParticles" aria-hidden="true"></div>
+
+  <main>
+    <section id="landing" class="screen landing active">
+      <div class="landing-bg"></div>
+      <header class="topbar">
+        <div class="brand"><span>R</span> RAVENHALL <small>OPEN STUDY</small></div>
+        <div class="edition">MMXXVI · AN OPEN UI EXPERIMENT</div>
+      </header>
+      <div class="landing-copy">
+        <p class="eyebrow">A DIGITAL STUDY IN DARK ACADEMIA</p>
+        <h1>Enter<br><em>the library.</em></h1>
+        <p class="lede">Four rooms. Four atmospheres. No dashboard waiting for you. Choose a place and disappear into it.</p>
+        <button class="wax-button" id="enterBtn">Choose your room <span>↗</span></button>
+      </div>
+      <div class="welcome-candle candle candle-main" aria-hidden="true"><div class="flame"></div><div class="wick"></div><div class="wax"></div><div class="candle-base"></div></div>
+      <div class="landing-caption">Light a candle. Open a door. Stay as long as you need.</div>
+
+      <div class="scroll-cue" aria-hidden="true"><span>SCROLL THE HALLS</span><i></i></div>
+
+      <section class="landing-chapter chapter-intro" aria-label="About Ravenhall">
+        <div class="chapter-rule"><span>✦</span></div>
+        <p class="eyebrow">NOT ANOTHER STUDY DASHBOARD</p>
+        <h2>Study should feel<br><em>like entering somewhere.</em></h2>
+        <p>Ravenhall is a small experiment in turning concentration into atmosphere — four rooms, four moods, and nothing between you and the work.</p>
+        <div class="chapter-art art-parchment" aria-hidden="true"></div>
+      </section>
+
+      <section class="landing-chapter chapter-quote" aria-label="Study quote">
+        <div class="quote-frame">
+          <span class="quote-mark">“</span>
+          <blockquote>We read to know we are not alone.</blockquote>
+          <cite>— C. S. Lewis</cite>
+          <span class="quote-ornament">✦ · ❦ · ✦</span>
+        </div>
+        <div class="chapter-side-note">
+          <span>THE NIGHT STUDY</span>
+          <strong>01</strong>
+          <p>Leave the noise outside. Bring one question in.</p>
+        </div>
+      </section>
+
+      <section class="landing-chapter chapter-manifesto" aria-label="Ravenhall principles">
+        <div class="manifesto-heading">
+          <p class="eyebrow">THE RAVENHALL METHOD</p>
+          <h2>A room can change<br><em>how a mind behaves.</em></h2>
+        </div>
+        <div class="manifesto-list">
+          <article><span>I</span><h3>Choose a mood.</h3><p>Rain for patience. Firelight for depth. Moonlight for quiet work.</p></article>
+          <article><span>II</span><h3>Remove the noise.</h3><p>No feeds. No badges. No dashboard asking what you did today.</p></article>
+          <article><span>III</span><h3>Stay with one thing.</h3><p>Read a page. Solve a problem. Write a paragraph. Let time pass.</p></article>
+        </div>
+        <div class="chapter-collage" aria-hidden="true"><img src="./assets/black-rose-bouquet.png" alt=""></div>
+      </section>
+
+      <section class="landing-chapter chapter-quote quote-dark" aria-label="Motivation">
+        <div class="quote-frame">
+          <span class="quote-kicker">A NOTE LEFT ON THE DESK</span>
+          <blockquote>Do not wait until you feel inspired. Begin, and let the room teach you how.</blockquote>
+          <cite>— Ravenhall, after midnight</cite>
+        </div>
+      </section>
+
+      <section class="landing-chapter chapter-doors" aria-label="The four study rooms">
+        <div class="doors-copy">
+          <p class="eyebrow">FOUR ROOMS · FOUR ATMOSPHERES</p>
+          <h2>Find your<br><em>place to disappear.</em></h2>
+          <p>Every door is a different kind of concentration. Choose one and the foyer will vanish.</p>
+          <button class="wax-button" id="enterBtnBottom">Choose your room <span>↗</span></button>
+        </div>
+        <div class="door-strip">
+          <div><span>I</span><strong>THE RAVEN</strong><small>firelight · old books</small></div>
+          <div><span>II</span><strong>NOCTURNE</strong><small>rain · ink · moonlight</small></div>
+          <div><span>III</span><strong>THE ALCHEMIST</strong><small>brass · curiosity</small></div>
+          <div><span>IV</span><strong>THE CONSERVATORY</strong><small>stone · poetry · storm</small></div>
+        </div>
+      </section>
+
+      <section class="landing-chapter chapter-end" aria-label="Closing note">
+        <div class="end-seal">R</div>
+        <p class="eyebrow">RAVENHALL · MMXXVI</p>
+        <h2>Read deeply.<br><em>Leave with better questions.</em></h2>
+        <p>Open source. No account. No productivity theatre.</p>
+        <button class="text-link" id="enterBtnEnd">Enter the study rooms <span>↗</span></button>
+      </section>
+    </section>
+
+    <section id="choose" class="screen choose">
+      <header class="choose-head">
+        <button class="ghost-link" id="chooseBack">← The foyer</button>
+        <div class="choose-title"><span>THE FOUR DOORS</span><strong>Where will you study?</strong></div>
+        <span class="choose-mark">R</span>
+      </header>
+      <div class="room-grid">
+        <button class="room-card raven" data-room="raven">
+          <div class="card-image"></div><span class="card-no">I</span>
+          <div class="card-copy"><span>THE RAVEN</span><strong>Grand Library</strong><small>Cathedral shelves · firelight</small></div><i>↗</i>
+        </button>
+        <button class="room-card nocturne" data-room="nocturne">
+          <div class="card-image"></div><span class="card-no">II</span>
+          <div class="card-copy"><span>NOCTURNE</span><strong>Moonlit Desk</strong><small>Rain on glass · quiet work</small></div><i>↗</i>
+        </button>
+        <button class="room-card alchemy" data-room="alchemy">
+          <div class="card-image"></div><span class="card-no">III</span>
+          <div class="card-copy"><span>THE ALCHEMIST</span><strong>Curiosity Room</strong><small>Dark wood · strange ideas</small></div><i>↗</i>
+        </button>
+        <button class="room-card conservatory" data-room="conservatory">
+          <div class="card-image"></div><span class="card-no">IV</span>
+          <div class="card-copy"><span>THE CONSERVATORY</span><strong>Rain &amp; Poetry</strong><small>Stone · windows · midnight rain</small></div><i>↗</i>
+        </button>
+      </div>
+      <div class="choose-footer"><span>Move slowly.</span><span>Choose a door.</span><span>Let the room do the rest.</span></div>
+      <div class="collage-stamp" aria-hidden="true"></div>
+    </section>
+
+    <section id="study" class="screen study" aria-label="Selected study room">
+      <div class="study-room" id="studyRoom">
+        <div class="room-bg" id="roomBg"></div>
+        <div class="room-tint" id="roomTint"></div>
+        <div class="moon-glow"></div>
+        <div class="rain-field" id="rainField" aria-hidden="true"></div>
+        <div class="dust-field" id="dustField" aria-hidden="true"></div>
+        <div class="smoke-field" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="page-turner" aria-hidden="true"><i></i><i></i></div>
+        <div class="moving-pen" aria-hidden="true"><span></span></div>
+        <div class="ambient-candle candle" aria-hidden="true"><div class="flame"></div><div class="wick"></div><div class="wax"></div><div class="candle-base"></div></div>
+
+        <header class="room-nav">
+          <button class="room-back" id="backBtn">← <span>Foyer</span></button>
+          <div class="room-heading"><span id="roomKicker">THE RAVEN</span><h2 id="roomTitle">Grand Library</h2></div>
+          <div class="room-tools">
+            <button class="tool-btn" id="rainBtn" title="Toggle rain">⌁<small>RAIN</small></button>
+            <button class="tool-btn" id="soundBtn" title="Toggle soundscape">◖<small>SOUND</small></button>
+            <button class="tool-btn" id="focusBtn" title="Hide interface">◌<small>FOCUS</small></button>
+            <button class="tool-btn" id="fullscreenBtn" title="Lock room fullscreen">⛶<small>FULL</small></button>
+          </div>
+        </header>
+
+        <div class="room-content">
+          <div class="room-plaque">
+            <span class="room-index" id="roomIndex">I</span>
+            <p class="eyebrow" id="roomSub">A PLACE FOR DEEP READING</p>
+            <h1 id="roomLine">The shelves remember everything.</h1>
+            <p id="roomDescription">A Gothic library for reading until the outside world becomes distant.</p>
+          </div>
+          <div class="room-detail" id="roomDetail">
+            <span>TONIGHT</span><strong id="roomDetailTitle">Firelight &amp; old books</strong><small id="roomDetailText">The room breathes slowly. Pages move when the rain reaches the windows.</small>
+          </div>
+        </div>
+
+        <footer class="room-footer"><span>RAVENHALL · OPEN STUDY</span><span id="status">The room is waiting.</span><span>ESC · FOYER</span></footer>
+        <div class="seal-mark" aria-hidden="true">R</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
